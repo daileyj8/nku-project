@@ -1,1 +1,1 @@
-# NKU Project Repo
+# John Dailey's Project
