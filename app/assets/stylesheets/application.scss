@@ -1,1 +1,72 @@
-@import 'bootstrap'
+// import the CSS framework
+@import "bootstrap";
+
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+#navcontainer ul li { display: inline; }
+
+html, body { height: 100%; width: 100%; }
+html,body{background-color:#CCCCB2;}
+
+
+.lefts {
+    position: relative;
+    top: 0;
+    float:left;
+    width: 150px; /* width of sidebar */
+    height: 95%;
+    border-radius: 15px;
+    background-color:#191E19;
+    color:#ffffff;
+  
+}
+
+.rights {
+    position: relative;
+    top: 0;
+    float:right;
+    width: 150px; /* width of sidebar */
+    height: 95%;
+    border-radius: 15px;
+    background-color:#191E19;
+    color:#ffffff;
+}
+
+.newgames {
+  padding:25px; 
+}
+
+li
+{
+display:inline;
+}
+.leftpanel {
+  position: relative;
+  float:right;
+  padding: 5px;
+}
+.rightpanel {
+  position: relative;
+  float:left;
+  padding: 5px;
+}
+.pad {
+ padding-top:27px; 
+}
+.pad2 {
+  padding-right:2px;
+}
+
+.option-button {
+    color:#000000;
+    height:40px;
+    letter-spacing:-2px;
+    font-size:180%;
+    font-weight:bold;
+}
+
