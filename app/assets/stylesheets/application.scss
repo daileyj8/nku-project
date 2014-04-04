@@ -12,13 +12,20 @@ list-style-type: none;
 
 html, body { height: 100%; width: 100%; }
 html,body{background-color:#CCCCB2;}
-
+.mid {
+  position: absolute;
+  left: 22%;
+  width: 56%;
+  height: 95%;
+  background-color:#EEEEEE;
+  border-radius: 15px;
+}
 
 .lefts {
     position: relative;
     top: 0;
     float:left;
-    width: 150px; /* width of sidebar */
+    width: 20%; /* width of sidebar */
     height: 95%;
     border-radius: 15px;
     background-color:#191E19;
@@ -30,7 +37,7 @@ html,body{background-color:#CCCCB2;}
     position: relative;
     top: 0;
     float:right;
-    width: 150px; /* width of sidebar */
+    width: 20%; /* width of sidebar */
     height: 95%;
     border-radius: 15px;
     background-color:#191E19;
@@ -56,17 +63,17 @@ display:inline;
   padding: 5px;
 }
 .pad {
- padding-top:27px; 
+ padding-top:63px; 
 }
 .pad2 {
-  padding-right:2px;
+  padding-right:6px;
 }
 
 .option-button {
     color:#000000;
-    height:40px;
+    height:35px;
     letter-spacing:-2px;
-    font-size:180%;
+    font-size:140%;
     font-weight:bold;
 }
 

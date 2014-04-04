@@ -1,3 +1,7 @@
+<% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+<% end %>
+
 <div class="lefts">
   <div class="leftpanel">
     <br>
@@ -5,6 +9,19 @@
   </div>
 </div>
 
+<div class="mid">
+<table>
+  <tr>
+    <th>Name of Game</th>
+  </tr>
+  <% @games.each do |game| %>
+    <tr>
+      <td> <%= game.name %> </td>
+    </tr>
+  <%end%>
+</table>
+</div>
+  
 <div class="rights">
   <div class="rightpanel">
     <br>

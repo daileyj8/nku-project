@@ -7,23 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
   <nav class="navbar navbar-inverse" role="navigation">
-    <div class="navbar-inner">
+    
 	    <div class="container">
         <div class="navbar-header">
           <a href="/welcome/index"><img src="http://www.1fogames.com/gamer.png" alt="logo" height="100px" width="150px"/></a>
-        </div>
+       </div>
+        
         <div class="pad">
           <ul>
-         
-          <li class="pad2"><a href="/games" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-road"></span> Games</a></li>
-          <li class="pad2"><a href="#" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-plane"></span> Coming Soon</a></li>
-          <li class="pad2"><a href="#" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-question-sign"></span> About</a></li>
+         <!--
+            <li class="pad2"><a href="/games" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-road"></span> Games</a></li>
+            <li class="pad2"><a href="#" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-plane"></span> Coming Soon</a></li>
+            <li class="pad2"><a href="#" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-question-sign"></span> About</a></li>
+            <li class="pad2"><a href="/sessions/new" class="btn btn-default btn-xs option-button"> Log In</a></li>
+          -->
+            <li class="pad2"><%= link_to 'Games', games_path %></li>
+            <li class="pad2"><%= link_to 'Coming Soon', '/' %></li>
+            <li class="pad2"><%= link_to 'About', '/' %></li>
+            <li class="pad2"><%= link_to 'Log out', session_path(:user_id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            <li class="pad2"><%= link_to 'Sign In', new_session_path %></li>
           
-       </ul>
+          
+          </ul>
+        
         </div>
       </div>
-    </div>
+    
   </nav>
   <%= yield %>
 
