@@ -1,28 +1,37 @@
 <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: name %>
 <% end %>
-
+<!---
 <div class="lefts">
   <div class="leftpanel">
     <br>
     hello
   </div>
 </div>
+--->
 
-<div class="mid">
-<table>
+<div class="panel panel-default mid">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel Title</h3>
+  </div>
+  <div class="panel-body">
+<table class="studentTable">
   <tr>
     <th>Name of Game</th>
+    <th>Genre</th>
   </tr>
   <% @games.each do |game| %>
     <tr>
       <td> <%= game.name %> </td>
+      <td> <%= game.genre %> </td>
     </tr>
   <%end%>
 </table>
-  
+  </div>
 </div>
-  
+
+
+<!---
 <div class="rights">
   <div class="rightpanel">
     <br>
@@ -40,3 +49,4 @@
     <img src="http://upload.wikimedia.org/wikipedia/en/8/84/Titanfall_box_art.jpg" width=100px height="150">     
   </div>
 </div>
+--->

@@ -7,18 +7,28 @@ margin: 0;
 padding: 0;
 list-style-type: none;
 }
-
+table
+{
+border-collapse:collapse;
+}
+table, th, td
+{
+border: 1px solid black;
+padding: 3px;
+}
 #navcontainer ul li { display: inline; }
 
 html, body { height: 100%; width: 100%; }
-html,body{background-color:#CCCCB2;}
+html, body{background-image: image-url("back2.jpg");}
+.test {
+  width: 70%}
 .mid {
   position: absolute;
-  left: 22%;
-  width: 56%;
+  left: 10%;
+  width: 80%;
   height: 95%;
   background-color:#EEEEEE;
-  border-radius: 15px;
+  
 }
 
 .lefts {
@@ -72,7 +82,7 @@ display:inline;
   
 }
 .pad {
- padding-top:63px; 
+ padding-top:50px; 
 }
 .pad2 {
   padding-right:6px;

@@ -28,6 +28,7 @@ class GamesController < ApplicationController
       return User.find(session[:user_id])
     end
   end 
+
   
   def index
     unless session[:user_id] != nil
