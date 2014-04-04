@@ -43,8 +43,15 @@ html,body{background-color:#CCCCB2;}
     background-color:#191E19;
     color:#ffffff;
 }
+.image {
+ height:15%;
+ width:90%;
+}
 
 .newgames {
+  position:relative;
+  float:left;
+  top: 130px;
   padding:25px; 
 }
 
@@ -61,6 +68,8 @@ display:inline;
   position: relative;
   float:left;
   padding: 5px;
+  width:15%;
+  
 }
 .pad {
  padding-top:63px; 

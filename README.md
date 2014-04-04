@@ -7,3 +7,4 @@
 -I have a couple extra links at the top that do not go anywhere yet (planning for the future).
 -I still need to create an admin user that can create games and manage things (anyone can do anything right now).
 -Still need to add mock shipping address and payment method
+-When a user selects to rent a game and it is sent, update the DB and how many are in stock (maybe create an onhand variable)
