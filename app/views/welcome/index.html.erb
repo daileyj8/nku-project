@@ -1,7 +1,12 @@
 <div align="center">
   <h1><b>Welcome to Gamer Universe&reg;</b></h1>
-
-  <img src= "http://www.mobilegamingexperience.com/images/characters_51e49a4e4a119.jpg" height=80% width=80% align="middle">
+  <div class="homepic">
+    <% if(session[:user_id] != nil)%>
+      <a href="/games"><img src= "http://ih2.redbubble.net/image.10027972.6747/sticker,375x360.png" height=500px width=500px align="middle"></a>
+    <% else %>
+      <a href="/sessions/new"><img src= "http://ih2.redbubble.net/image.10027972.6747/sticker,375x360.png" height=500px width=500px align="middle"></a>
+    <% end %>
+  </div>
 </div>
 <!--
   <br><%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>

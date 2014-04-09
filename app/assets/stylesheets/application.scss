@@ -1,11 +1,29 @@
 // import the CSS framework
 @import "bootstrap";
 
+.homepic{
+ opacity:0.9;
+ 
+}
+
+.transparent {
+  position: absolute;
+  left: 20%;
+  height: 80%;
+  width: 60%;
+}
 #navcontainer ul
 {
 margin: 0;
 padding: 0;
 list-style-type: none;
+}
+.blue{
+ color:#007ACC;
+ padding-left:15px;
+}
+.green{
+  color:#003300;
 }
 table
 {
@@ -19,16 +37,19 @@ padding: 3px;
 #navcontainer ul li { display: inline; }
 
 html, body { height: 100%; width: 100%; }
-html, body{background-image: image-url("back2.jpg");}
+html, body{background-image: image-url("back7.jpg");
+  background-repeat:no-repeat;
+  background-size:100% 100%;}
 .test {
   width: 70%}
+
 .mid {
   position: absolute;
   left: 10%;
   width: 80%;
-  height: 95%;
-  background-color:#EEEEEE;
   
+  background-color:#EEEEEE;
+  opacity: 0.9;
 }
 
 .lefts {
@@ -91,7 +112,7 @@ display:inline;
 .option-button {
     color:#000000;
     height:35px;
-    letter-spacing:-2px;
+    
     font-size:140%;
     font-weight:bold;
 }

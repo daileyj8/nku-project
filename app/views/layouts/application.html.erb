@@ -10,32 +10,19 @@
   
   <nav class="navbar navbar-inverse" role="navigation">
     
-	    <div class="container">
-        <div class="navbar-header">
-          <a href="/welcome/index"><img src="http://www.1fogames.com/gamer.png" alt="logo" height="100px" width="150px"/></a>
-       </div>
-        
-        <div class="pad">
-          <ul class="nav nav-pills">
-         <!--
-            <li class="pad2"><a href="/games" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-road"></span> Games</a></li>
-            <li class="pad2"><a href="#" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-plane"></span> Coming Soon</a></li>
-            <li class="pad2"><a href="#" class="btn btn-default btn-xs option-button"><span class="glyphicon glyphicon-question-sign"></span> About</a></li>
-            <li class="pad2"><a href="/sessions/new" class="btn btn-default btn-xs option-button"> Log In</a></li>
-          -->
-            <li class="pad2"><%= link_to 'Games', games_path %></li>
-            <li class="pad2"><%= link_to 'Coming Soon', '/' %></li>
-            <li class="pad2"><%= link_to 'About', '/' %></li>
-            <% if(session[:user_id] != nil)%>
-            <li class="pad2"><%= link_to 'Log out', session_path(:user_id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
-            <%else%>
-            <li class="pad2"><%= link_to 'Sign In', new_session_path %></li>
-            <%end%>
+    <ul class="nav nav-pills option-button">
+      <li><a href="/welcome/index"><img src="http://www.1fogames.com/gamer.png" alt="logo" height="100px" width="150px"/></a></li>
+      <li class="pad2"><%= link_to 'Games', games_path %></li>
+      <li class="pad2"><%= link_to 'Coming Soon', '/games/soon' %></li>
+      <li class="pad2"><%= link_to 'About', '/' %></li>
+      <% if(session[:user_id] != nil)%>
+        <li class="pad2"><%= link_to 'My Queue', '/' %></li>
+        <li class="pad2"><%= link_to 'Log out', session_path(:user_id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <%else%>
+        <li class="pad2"><%= link_to 'Sign In', new_session_path %></li>
+      <%end%>
           
-          </ul>
-        
-        </div>
-      </div>
+    </ul>
     
   </nav>
   <%= yield %>

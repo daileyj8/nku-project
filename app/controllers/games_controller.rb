@@ -29,6 +29,8 @@ class GamesController < ApplicationController
     end
   end 
 
+  def soon
+  end
   
   def index
     unless session[:user_id] != nil
