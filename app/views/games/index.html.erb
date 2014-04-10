@@ -1,19 +1,20 @@
 <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: name %>
 <% end %>
-<!---
-<div class="lefts">
-  <div class="leftpanel">
-    <br>
-    hello
-  </div>
-</div>
---->
 
 <div class="panel mid">
   <div class="panel-heading">
-    <h3 class="panel-title">Filter: </h3>
-  </div>
+    <ul class="list-inline">
+      <li>
+        <h3 class="panel-title">Filter: </h3>
+      </li>
+      <li>
+        <%=form_tag games_path, method:"get" do%>
+          <%=select_tag "genre_select", options_for_select(genre_names) %>
+          <%=submit_tag "Filter"%>
+        <%end%>
+      </li>
+    </ul>
   <div class="panel body">
     <table class="studentTable">
       <tr>
@@ -32,22 +33,3 @@
   </div>
 </div>
 
-<!---
-<div class="rights">
-  <div class="rightpanel">
-    <br>
-    <img src="http://www.etftrends.com/wp-content/uploads/2010/09/WhatsNewIcon.jpg" align="center" height="70px" width="145px">
-    <br>
-    <br>
-  </div>
-  <div class="newgames">
-    <img src="http://upload.wikimedia.org/wikipedia/en/9/9c/Call_of_duty_ghosts_box_art.jpg" width=100px height="150">    
-    <br>
-    <br>     
-    <img src="http://upload.wikimedia.org/wikipedia/en/0/02/Thief_box_art.jpg" width=100px height="150">      
-    <br>
-    <br>     
-    <img src="http://upload.wikimedia.org/wikipedia/en/8/84/Titanfall_box_art.jpg" width=100px height="150">     
-  </div>
-</div>
---->

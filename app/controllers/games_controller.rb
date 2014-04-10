@@ -33,12 +33,18 @@ class GamesController < ApplicationController
   end
   
   def index
+    @games= Game.all
+    @current=get_current
     unless session[:user_id] != nil
       flash[:notice] = "You must log in!"
       redirect_to new_session_path
       return
     end
-    @games= Game.all
-    @current=get_current
+    
+    if params[:genre_select]
+      @selected= Game.find_all_by_genre(params[:genre_select])
+      @games= @selected
+      
+    end
   end
 end

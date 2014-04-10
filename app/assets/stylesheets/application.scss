@@ -3,7 +3,11 @@
 
 .homepic{
  opacity:0.9;
- 
+}
+
+.centera{
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .transparent {
@@ -35,7 +39,9 @@ border: 1px solid black;
 padding: 3px;
 }
 #navcontainer ul li { display: inline; }
-
+.in{
+ display: inline; 
+}
 html, body { height: 100%; width: 100%; }
 html, body{background-image: image-url("back7.jpg");
   background-repeat:no-repeat;

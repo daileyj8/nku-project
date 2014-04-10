@@ -11,7 +11,7 @@
   <nav class="navbar navbar-inverse" role="navigation">
     
     <ul class="nav nav-pills option-button">
-      <li><a href="/welcome/index"><img src="http://www.1fogames.com/gamer.png" alt="logo" height="100px" width="150px"/></a></li>
+      <li><a href="/welcome/index">Home<!--<img src="http://www.1fogames.com/gamer.png" alt="logo" height="70px" width="100px"/>---></a></li>
       <li class="pad2"><%= link_to 'Games', games_path %></li>
       <li class="pad2"><%= link_to 'Coming Soon', '/games/soon' %></li>
       <li class="pad2"><%= link_to 'About', '/' %></li>
@@ -22,7 +22,7 @@
         <li class="pad2"><%= link_to 'Sign In', new_session_path %></li>
       <%end%>
           
-    </ul>
+      </ul>
     
   </nav>
   <%= yield %>
