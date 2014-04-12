@@ -22,6 +22,11 @@ class GamesController < ApplicationController
     end
   end
   
+  def show
+    @game= Game.find(params[:id])
+   
+  end
+  
   def get_current
     if(session[:user_id] == nil)
       return nil

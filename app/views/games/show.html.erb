@@ -1,0 +1,42 @@
+
+
+<div class="panel mid">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%=@game.name%> </h3>
+  </div>
+  <div class="panel body">
+    <table cellspacing="5">
+      <tr>
+        <td>
+          This will be a spot for pictures of the game
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Game Genre= <%=@game.genre%>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Game Rating= <%=@game.rating%>
+        </td>
+      </tr>
+      <%if @game.on_hand > 0%>
+        <%in_out= "Yes"%>
+      <%else%>
+        <%in_out= "No"%>
+      <%end%>
+      <tr>
+        <td>
+          Game in Stock= <%=in_out%>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Game Description= <%=@game.description%>
+        </td>
+      </tr>
+    </table>
+    <%= link_to "Add to Queue", "/games" %>
+  </div>
+</div>
