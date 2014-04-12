@@ -12,6 +12,7 @@ class GamesController < ApplicationController
     @game.num_in_stock= params[:game][:num_in_stock]
     @game.rating= params[:game][:rating]
     @game.description= params[:game][:description]
+    @game.on_hand= params[:game][:on_hand]
     
     if @game.save
       redirect_to '/games/new'

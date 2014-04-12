@@ -24,13 +24,18 @@
   </p>
 
   <p>
+    <%= f.label :on_hand %><br>
+    <%= f.text_field :on_hand %>
+  </p>
+
+  <p>
     <%= f.label :genre %><br>
-    <%= f.text_field :genre %>
+    <%= f.select :genre, options_for_select(genre_names) %>
   </p>
 
   <p>
     <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
+    <%= f.select :rating, options_for_select(rating_list) %>
   </p>
 
   <p>
