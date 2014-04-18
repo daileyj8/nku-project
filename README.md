@@ -9,10 +9,11 @@
 -Still need to add mock shipping address and payment method
 -When a user selects to rent a game and it is sent, update the DB and how many are in stock (maybe create an onhand variable)
 
------Week 2 04/11/2014-----
+-----Week 2 04/18/2014-----
 -Most of the time experimenting with Bootstrap
 -Created a filter system when viewing all games(will add more)
 -Ability to see each game individually and read descruption
 -added the onhand variable to games to make it different from numberinstock
--Still need the admin user
--still need to add mock shipping.
+-still need to add mock shipping
+-Added a Queue object to link to Users and Games
+-Created admin user
