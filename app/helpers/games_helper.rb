@@ -23,4 +23,8 @@ module GamesHelper
       ['RP','RP']
     ]
   end
+  def add
+    List.create(game_id: @game.id, user_id: @current.id, gone_out: false, time: Date.today)
+  end
+  
 end

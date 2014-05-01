@@ -7,7 +7,9 @@ NkuProject::Application.routes.draw do
   resources :users
   resources :sessions
   resources :users do 
-    resources :queues
+    resources :lists
   end
-  
+  resources :games do
+    collection { post :add }
+  end
 end

@@ -36,12 +36,18 @@ class GamesController < ApplicationController
     end
   end
   
+  def add
+    AddToList.new(params[:cg], params[:cu])
+    redirect_to "/games", notice: "Added to Queue."
+  end
+  
   def show
     unless session[:user_id] != nil
       flash[:notice] = "You must log in"
       redirect_to new_session_path
       return
     end
+    @current=get_current
     @game= Game.find(params[:id])
    
   end

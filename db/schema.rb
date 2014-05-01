@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140415020347) do
+ActiveRecord::Schema.define(version: 20140425194105) do
 
   create_table "games", force: true do |t|
     t.string   "name"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20140415020347) do
     t.integer  "on_hand"
   end
 
+  create_table "lists", force: true do |t|
+    t.integer "game_id"
+    t.integer "user_id"
+    t.boolean "gone_out"
+    t.date    "time"
+  end
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -31,6 +38,12 @@ ActiveRecord::Schema.define(version: 20140415020347) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "cc_number"
+    t.string   "cc_type"
+    t.integer  "cc_security"
   end
 
 end

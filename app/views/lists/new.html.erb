@@ -1,0 +1,22 @@
+<%= form_for @queue do |f| %>
+
+  <p>
+    <%= f.label :game_id %><br>
+    <%= f.text_field :game_id %>
+  </p>
+
+  <p>
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </p>
+
+  <p>
+    <%= f.label :gone_out %><br>
+    <%= f.text_field :gone_out %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<%end%>

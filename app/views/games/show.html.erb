@@ -1,5 +1,4 @@
 
-
 <div class="panel mid">
   <div class="panel-heading">
     <h3 class="panel-title"><%=@game.name%> </h3>
@@ -37,6 +36,10 @@
         </td>
       </tr>
     </table>
-    <%= link_to "Add to Queue", "/games" %>
+    <%= form_tag add_games_path, multipart: true do %>
+      <%= hidden_field_tag :cg, @game.id %>
+      <%= hidden_field_tag :cu, @current.id %>
+      <%= submit_tag "Add to Queue" %>
+    <%end%>
   </div>
 </div>

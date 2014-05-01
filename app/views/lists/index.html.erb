@@ -1,0 +1,28 @@
+<% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+<% end %>
+
+<div class="panel mid">
+  <div class="panel-heading">
+    <ul class="list-inline">
+      <li>
+        <h3 class="panel-title">Queue </h3>
+      </li>
+    </ul>
+  <div class="panel body">
+    <table class="studentTable">
+      <tr>
+        <th>Name of Game</th>
+        <th>Description</th>
+      </tr>
+      <% @list.each do |list| %>
+        <tr>
+          <% this= Game.find(list.game_id) %>
+          <td> <%= this.name %> </td>
+          <td> <%= this.description %> </td>
+          
+        </tr>
+      <%end%>
+    </table>
+  </div>
+</div>

@@ -16,7 +16,7 @@
       <li class="pad2"><%= link_to 'Coming Soon', '/games/soon' %></li>
       <li class="pad2"><%= link_to 'About', '/' %></li>
       <% if(session[:user_id] != nil)%>
-        <li class="pad2"><%= link_to 'My Queue', '/' %></li>
+      <li class="pad2"><%= link_to 'My Queue', user_lists_path(:user_id) %></li>
         <li class="pad2"><%= link_to 'Log out', session_path(:user_id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
       <%else%>
         <li class="pad2"><%= link_to 'Sign In', new_session_path %></li>

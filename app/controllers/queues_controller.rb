@@ -1,2 +1,0 @@
-class QueuesController < ApplicationController
-end
