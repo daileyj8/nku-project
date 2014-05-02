@@ -15,13 +15,16 @@
       <tr>
         <th>Name of Game</th>
         <th>System</th>
+        
       </tr>
       <% @list.each do |list| %>
         <tr>
           <% this= Game.find(list.game_id) %>
           <td> <%= this.name %> </td>
           <td> <%=this.system%> </td>
+          <% if !list.gone_out %>
           <td> <%= link_to 'Remove', "/users/#{@current.id}/lists/#{list.id}", method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+          <%end%>
         </tr>
       <%end%>
     </table>
