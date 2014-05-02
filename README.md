@@ -10,25 +10,25 @@
 -When a user selects to rent a game and it is sent, update the DB and how many are in stock (maybe create an onhand variable)
 
 -----Assignment2 04/18/2014-----
--Most of the time experimenting with Bootstrap
--Created a filter system when viewing all games(will add more)
--Ability to see each game individually and read descruption
--added the onhand variable to games to make it different from numberinstock
--still need to add mock shipping
--Added a Queue object to link to Users and Games
--Created admin user
+- Most of the time experimenting with Bootstrap
+- Created a filter system when viewing all games(will add more)
+- Ability to see each game individually and read descruption
+- Added the onhand variable to games to make it different from numberinstock
+- Still need to add mock shipping
+- Added a Queue object to link to Users and Games
+- Created admin user
 
 -----Assignment3 05/02/2014-----
--Added shipping information to user's accounts (address, city, state, credit card info)
--Added a queue index that the user wil see as their queue list
--Got the Queue system to work
--Added a games/manage view and method so the admin can keep track of games that were shipped out (goneout variable on each List)
--Added ability to remove from Queue list
--Added the about page
--Added the coming soon page
--Added a system and image variable to Game
--Change what variables some views see
--Cleaned up the layout
+- Added shipping information to user's accounts (address, city, state, credit card info)
+- Added a queue index that the user wil see as their queue list
+- Got the Queue system to work
+- Added a games/manage view and method so the admin can keep track of games that were shipped out (goneout variable on each List)
+- Added ability to remove from Queue list
+- Added the about page
+- Added the coming soon page
+- Added a system and image variable to Game
+- Change what variables some views see
+- Cleaned up the layout
 
 -----Use the site as a User-----
 1) First you will have to create an account before doing anything else(each page will redirect you if not signed in).
