@@ -9,18 +9,19 @@
         <h3 class="panel-title">Queue </h3>
       </li>
     </ul>
+  </div>
   <div class="panel body">
     <table class="studentTable">
       <tr>
         <th>Name of Game</th>
-        <th>Description</th>
+        <th>System</th>
       </tr>
       <% @list.each do |list| %>
         <tr>
           <% this= Game.find(list.game_id) %>
           <td> <%= this.name %> </td>
-          <td> <%= this.description %> </td>
-          
+          <td> <%=this.system%> </td>
+          <td> <%= link_to 'Remove', "/users/#{@current.id}/lists/#{list.id}", method: :delete, data: { confirm: 'Are you sure?' } %> </td>
         </tr>
       <%end%>
     </table>

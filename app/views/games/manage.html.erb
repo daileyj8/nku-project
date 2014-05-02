@@ -1,0 +1,29 @@
+<div class="panel mid">
+  <div class="panel-heading">
+    <ul class="list-inline">
+      <li>
+        <h3 class="panel-title">Shipped Out </h3>
+      </li>
+    </ul>
+  </div>
+  <div class="panel body">
+    <table class="studentTable">
+      <tr>
+        <th>Name of Game</th>
+        <th>User ID</th>
+      </tr>
+      <% @man.each do |list| %>
+        <%if list.gone_out%>
+          <tr>
+        
+            <td> <%=(Game.find(list.game_id)).name%> </td>
+            <td> <%=list.user_id%> </td>
+          
+          </tr>
+        <%end%>
+      <%end%>
+      
+    </table>
+    
+  </div>
+</div>

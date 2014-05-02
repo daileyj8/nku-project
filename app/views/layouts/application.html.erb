@@ -14,7 +14,7 @@
       <li><a href="/welcome/index">Home<!--<img src="http://www.1fogames.com/gamer.png" alt="logo" height="70px" width="100px"/>---></a></li>
       <li class="pad2"><%= link_to 'Games', games_path %></li>
       <li class="pad2"><%= link_to 'Coming Soon', '/games/soon' %></li>
-      <li class="pad2"><%= link_to 'About', '/' %></li>
+      <li class="pad2"><%= link_to 'About', '/games/about' %></li>
       <% if(session[:user_id] != nil)%>
       <li class="pad2"><%= link_to 'My Queue', user_lists_path(:user_id) %></li>
         <li class="pad2"><%= link_to 'Log out', session_path(:user_id), method: :delete, data: { confirm: 'Are you sure?' } %></li>

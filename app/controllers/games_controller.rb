@@ -24,6 +24,8 @@ class GamesController < ApplicationController
       @game.rating= params[:game][:rating]
       @game.description= params[:game][:description]
       @game.on_hand= params[:game][:on_hand]
+      @game.image= params[:game][:image]
+      @game.system= params[:game][:system]
     
       if @game.save
         redirect_to '/games/new'
@@ -66,6 +68,30 @@ class GamesController < ApplicationController
       redirect_to new_session_path
       return
     end
+  end
+
+  def manage
+    
+    unless session[:user_id] != nil
+      flash[:notice] = "You must log in!"
+      redirect_to new_session_path
+      return
+    end
+    @current=get_current
+    unless @current.admin
+      redirect_to '/games'
+    end
+    @man= List.all
+    
+  end
+  
+  def about
+  end
+  
+  def import
+    GameUploader.new(params[:file])
+    redirect_to "/games", notice: "Games Imported."
+    
   end
   
   def index
